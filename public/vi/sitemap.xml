@@ -2,132 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/2-create-aws-resources/1-s3-and-cloudfront/</loc>
+    <loc>/vi/2-create-aws-resources/1-s3-and-cloudfront/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-create-aws-resources/1-s3-and-cloudfront/"
+                href="/2-create-aws-resources/1-s3-and-cloudfront/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-create-aws-resources/1-s3-and-cloudfront/"
+                href="/vi/2-create-aws-resources/1-s3-and-cloudfront/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/1-prerequisites/</loc>
+    <loc>/vi/1-prerequisites/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-prerequisites/"
+                href="/1-prerequisites/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-prerequisites/"
+                href="/vi/1-prerequisites/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-create-aws-resources/</loc>
+    <loc>/vi/2-create-aws-resources/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-create-aws-resources/"
+                href="/2-create-aws-resources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-create-aws-resources/"
+                href="/vi/2-create-aws-resources/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-create-aws-resources/2-lambda/</loc>
+    <loc>/vi/2-create-aws-resources/2-lambda/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-create-aws-resources/2-lambda/"
+                href="/2-create-aws-resources/2-lambda/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-create-aws-resources/2-lambda/"
+                href="/vi/2-create-aws-resources/2-lambda/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-create-aws-resources/3-api-gateway/</loc>
+    <loc>/vi/2-create-aws-resources/3-api-gateway/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-create-aws-resources/3-api-gateway/"
+                href="/2-create-aws-resources/3-api-gateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-create-aws-resources/3-api-gateway/"
+                href="/vi/2-create-aws-resources/3-api-gateway/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-test-api/</loc>
+    <loc>/vi/3-test-api/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-test-api/"
+                href="/3-test-api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-test-api/"
+                href="/vi/3-test-api/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-clean-resources/</loc>
+    <loc>/vi/4-clean-resources/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-clean-resources/"
+                href="/4-clean-resources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-clean-resources/"
+                href="/vi/4-clean-resources/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/</loc>
+    <loc>/vi/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/"
+                href="/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/categories/</loc>
+    <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/categories/"
+                href="/vi/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/tags/</loc>
+    <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/tags/"
+                href="/vi/tags/"
                 />
   </url>
 </urlset>
