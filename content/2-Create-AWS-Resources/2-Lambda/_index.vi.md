@@ -18,10 +18,10 @@ pre = "<b>2.2. </b>"
 
 1. Vào IAM Role và nhấn **Create role** để tạo Role mới cho Lambda.
 2. Chọn **AWS service**/**Lambda**, nhấn **Next**.
-   ![Image](../../../images/Lambda/Lambda_IAM.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM.jpg)
 3. Ở bước Add permissions tiếp tục nhấn **Next**.
 4. Đặt tên cho Role và review lại các tùy chọn sau đó nhấn **Create role**.
-   ![Image](../../../images/Lambda/Lambda_IAM_2.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_2.jpg)
 5. Chọn Role vừa tạo, nhấn Add permissions -> Create inline policy để tạo Policy tùy chỉnh cho Role.
 
 _JSON policy:_
@@ -61,16 +61,16 @@ _JSON policy:_
     }
 
 5. Chọn tab JSON và dán policy bên trên vào sau đó nhấn **Next**.
-   ![Image](../../../images/Lambda/Lambda_IAM_3.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_3.jpg)
 6. Đặt tên và xem lại các tùy chọn, sau đó nhấn **Create policy**.
-   ![Image](../../../images/Lambda/Lambda_IAM_4.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_4.jpg)
 
 #### Tạo hàm Lambda
 
 1. Trên thanh tìm kiếm, tìm Lambda và nhấn chọn để vào giao diện dịch vụ AWS Lambda, sau đó nhấn **Create function**.
-   ![Image](../../../images/Lambda/Console_1.jpg)
+   ![Image](../../images/Lambda/Console_1.jpg)
 2. Cấu hình các thông tin cơ bản cho Lambda function (tên, ngôn ngữ lập trình,...). Ở mục **Execution role**, chọn tùy chọn **Use an existing role** và nhấn chọn IAM Role chúng ta vừa tạo ở trên. Sau đó nhấn **Create function**.
-   ![Image](../../../images/Lambda/Console_2.jpg)
+   ![Image](../../images/Lambda/Console_2.jpg)
 
 Đoạn code này có mục đích là xóa file chỉ định trong S3 bucket cụ thể. Với 2 biến *bucketName* và *objectKey* được lấy từ path parameter trong url.
 
@@ -111,6 +111,6 @@ _JSON policy:_
 
 
 3. Dán mã nguồn bên trên vào phần Code của Lambda function vừa tạo rồi nhấn **Deploy**.
-    ![Image](../../../images/Lambda/Lambda_Func_1.jpg)
+    ![Image](../../images/Lambda/Lambda_Func_1.jpg)
 
 Chúng ta vừa hoàn thành bước tạo Lambda function có chức năng xóa một object trong S3 Bucket.

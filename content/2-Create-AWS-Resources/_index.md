@@ -19,4 +19,4 @@ In the third step, we will create an API Gateway to interact with the S3 Bucket 
 
 #### Overview Architecture
 
-![Image](../../images/Workshop_000002.drawio.png)
+![Image](../images/Workshop_000002.drawio.png)

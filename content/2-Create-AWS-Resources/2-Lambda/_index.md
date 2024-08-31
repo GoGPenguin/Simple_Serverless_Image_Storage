@@ -17,10 +17,10 @@ In this step, you will create a Lambda Function to delete a specified file from 
 
 1. Go to IAM Roles and click **Create role** to create a new Role for Lambda.
 2. Select **AWS service**/**Lambda**, then click **Next**.
-   ![Image](../../../images/Lambda/Lambda_IAM.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM.jpg)
 3. On the Add permissions step, click **Next**.
 4. Name the Role and review the options, then click **Create role**.
-   ![Image](../../../images/Lambda/Lambda_IAM_2.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_2.jpg)
 5. Select the created Role, click Add permissions -> Create inline policy to create a custom Policy for the Role.
 
 _JSON policy:_
@@ -60,16 +60,16 @@ _JSON policy:_
     }
 
 5. Select the JSON tab and paste the policy above, then click **Next**.
-   ![Image](../../../images/Lambda/Lambda_IAM_3.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_3.jpg)
 6. Name and review the options, then click **Create policy**.
-   ![Image](../../../images/Lambda/Lambda_IAM_4.jpg)
+   ![Image](../../images/Lambda/Lambda_IAM_4.jpg)
 
 #### Create Lambda Function
 
 1. In the search bar, search for Lambda and select it to go to the AWS Lambda service interface, then click **Create function**.
-   ![Image](../../../images/Lambda/Console_1.jpg)
+   ![Image](../../images/Lambda/Console_1.jpg)
 2. Configure the basic information for the Lambda function (name, programming language, etc.). In the **Execution role** section, select **Use an existing role** and choose the IAM Role you created earlier. Then click **Create function**.
-   ![Image](../../../images/Lambda/Console_2.jpg)
+   ![Image](../../images/Lambda/Console_2.jpg)
 
 This code is intended to delete a specified file in a specific S3 bucket. The variables *bucketName* and *objectKey* are retrieved from the path parameters in the URL.
 
@@ -109,6 +109,6 @@ This code is intended to delete a specified file in a specific S3 bucket. The va
     };
 
 3. Paste the above code into the Code section of the Lambda function you created, then click **Deploy**.
-    ![Image](../../../images/Lambda/Lambda_Func_1.jpg)
+    ![Image](../../images/Lambda/Lambda_Func_1.jpg)
 
 You have now completed the step of creating a Lambda function to delete an object in an S3 Bucket.
