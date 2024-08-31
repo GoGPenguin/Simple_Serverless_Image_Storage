@@ -12,21 +12,21 @@
     <title>Create API Gateway :: Simple Serverless Image Storage Using AWS S3</title>
 
     
-    <link href="/css/nucleus.css?1725129272" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725129272" rel="stylesheet">
-    <link href="/css/hybrid.css?1725129272" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725129272" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725129272" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725129272" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725129272" rel="stylesheet">
-    <link href="/css/theme.css?1725129272" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725129272" rel="stylesheet">
+    <link href="/css/nucleus.css?1725129562" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725129562" rel="stylesheet">
+    <link href="/css/hybrid.css?1725129562" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725129562" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725129562" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725129562" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725129562" rel="stylesheet">
+    <link href="/css/theme.css?1725129562" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725129562" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725129272" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725129562" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725129272"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725129562"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725129272"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725129272"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725129562"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725129562"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725129272"></script>
+<script type="text/javascript" src="/js/search.js?1725129562"></script>
 
     
   </div>
@@ -471,37 +471,37 @@
 <h4 id="create-upload-api-put">Create Upload API (PUT)</h4>
 <ol>
 <li>In the search bar, search for API Gateway and select it to go to the AWS API Gateway service page. Click <strong>Create API</strong>, select <strong>REST API</strong>, and then click <strong>Build</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_1.jpg"></li>
 <li>Enter a name for the API, leave the other options as default, and click <strong>Create API</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_2.jpg"></li>
 <li>You will be automatically redirected to the management page of the created API. Select &lsquo;/&rsquo; and then click <strong>Create resource</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_3.jpg"></li>
 <li>Follow the steps as shown in the images below:
-<img alt="Image" src="../../../images/API%20Gateway/Console_4.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/Console_5.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/Console_6.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_4.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Console_5.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Console_6.jpg"></li>
 <li>Click on &lsquo;<strong>/{key}</strong>&rsquo; and select <strong>Create method</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_7.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_7.jpg"></li>
 <li>For file upload, select <strong>PUT</strong> for <strong>Method type</strong>, choose the appropriate <strong>Region</strong>, and select AWS Service as <strong>Simple Storage Service (S3)</strong>. Set <strong>HTTP Method</strong> to <strong>PUT</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_1.jpg"></li>
 <li>Follow the steps shown in the images. For <strong>Execution role</strong>, create a Role similar to the IAM Role for Lambda but with AWS Service as API Gateway, and apply the corresponding policies. Then, paste the ARN of the IAM Role into the method.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_2.jpg"></li>
 <li>Select <strong>API key required</strong> under <strong>Method request settings</strong> and then click <strong>Create method</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_3.jpg"></li>
 <li>The method is created successfully. Click the <strong>Integration request</strong> tab and then select <strong>Edit</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_4.jpg"></li>
 <li>In the <strong>URL path parameters</strong> section, <strong>Add path parameter</strong> as shown in the image. Then click <strong>Save changes</strong>.
 <code>Name: bucket, Mapped from: method.request.path.bucket (corresponds to parameters in the path).</code>
 <code>Name: filekey, Mapped from: method.request.path.key (corresponds to parameters in the path).</code>
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_5.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_5.jpg"></li>
 <li>Select <strong>API settings</strong> in the side panel, then click <strong>Manage media types</strong> to add binary media types that the API can receive.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_1.jpg"></li>
 <li>Add the following <strong>Binary media types</strong> to interact with image files and save.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_2.jpg"></li>
 <li>In the <strong>Integration response</strong> tab of the PUT method you just created, select <strong>Edit</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_3.jpg"></li>
 <li>In the <strong>Mapping templates</strong> section, you can customize the API response. Here, configure the API to return the CloudFront path of the file if the upload is successful. Then save the changes.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_4.jpg"></li>
 <li>Return to the page of the PUT method you created, select <strong>Deploy API</strong>.</li>
 <li>Choose or create a new Stage and then click <strong>Deploy</strong>.
 
@@ -509,9 +509,9 @@
 </code></pre>
 </div>
 
-<img alt="Image" src="../../../images/API%20Gateway/Deploy_API_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Deploy_API_1.jpg"></li>
 <li>After successful deployment, select <strong>Stages</strong> in the function panel, click on the corresponding API to view the API endpoint.
-<img alt="Image" src="../../../images/API%20Gateway/Deploy_API_2.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Deploy_API_2.jpg">
 Next, we will create an API Key and Usage plan for the API.
 
 <div class="notices note" ><pre><code>**API key** is used for authentication when calling the API to prevent unauthorized access and misuse.
@@ -521,30 +521,30 @@ Next, we will create an API Key and Usage plan for the API.
 </li>
 <li>In the function panel, select API keys and then click <strong>Create API key</strong>.</li>
 <li>Enter a name for the API key and save.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey.jpg"></li>
 <li>Copy the newly created API key.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_2.jpg"></li>
 <li>In the <strong>Usage plan</strong> section, click <strong>Create usage plan</strong>.</li>
 <li>Enter the desired configurations. <strong>Rate</strong>: Number of requests per second. <strong>Burst</strong>: Number of concurrent requests. <strong>Requests</strong>: Number of requests users can make in a time period (daily, monthly, etc.). Then click <strong>Create usage plan</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_3.jpg"></li>
 <li>Return to <strong>API keys</strong>, select the API key you created, and click <strong>Add to usage plan</strong> to associate the API with the desired Usage plan.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_4.jpg"></li>
 <li>In the <strong>Associated stages</strong> tab, click <strong>Add stage</strong> to add the deployed API to the Usage plan.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_5.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_6.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_5.jpg">
+<img alt="Image" src="../../images/API%20Gateway/APIKey_6.jpg"></li>
 </ol>
 <h4 id="create-delete-api-delete">Create Delete API (DELETE)</h4>
 <ol>
 <li>In the <strong>Resources</strong> section of the function panel, select <strong>Create method</strong>.</li>
 <li>Choose <strong>Method type</strong> as <strong>DELETE</strong>. Since this API triggers the Lambda function created earlier, configure it as shown below.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_1.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_1.jpg"></li>
 <li>Then click <strong>Create method</strong>.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_2.jpg"></li>
 <li>The Delete API has been created successfully.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_3.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_3.jpg"></li>
 <li>Similarly, proceed to deploy the Delete API.
-<img alt="Image" src="../../../images/Lambda/Deploy_1.jpg">
-<img alt="Image" src="../../../images/Lambda/Deploy_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Deploy_1.jpg">
+<img alt="Image" src="../../images/Lambda/Deploy_2.jpg"></li>
 </ol>
 <p>Thus, we have created the Upload and Delete APIs. Next, we will proceed to testing.</p>
 
@@ -729,19 +729,19 @@ Next, we will create an API Key and Usage plan for the API.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725129272"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725129272"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725129272"></script>
-    <script src="/js/jquery.sticky.js?1725129272"></script>
-    <script src="/js/featherlight.min.js?1725129272"></script>
-    <script src="/js/highlight.pack.js?1725129272"></script>
+    <script src="/js/clipboard.min.js?1725129562"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725129562"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725129562"></script>
+    <script src="/js/jquery.sticky.js?1725129562"></script>
+    <script src="/js/featherlight.min.js?1725129562"></script>
+    <script src="/js/highlight.pack.js?1725129562"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725129272"></script>
-    <script src="/js/learn.js?1725129272"></script>
-    <script src="/js/hugo-learn.js?1725129272"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725129562"></script>
+    <script src="/js/learn.js?1725129562"></script>
+    <script src="/js/hugo-learn.js?1725129562"></script>
 
-    <link href="/mermaid/mermaid.css?1725129272" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725129272"></script>
+    <link href="/mermaid/mermaid.css?1725129562" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725129562"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

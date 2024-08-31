@@ -12,21 +12,21 @@
     <title>Tạo API Gateway :: Kho lưu trữ ảnh Serverless đơn giản với AWS S3</title>
 
     
-    <link href="/css/nucleus.css?1725129272" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725129272" rel="stylesheet">
-    <link href="/css/hybrid.css?1725129272" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725129272" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725129272" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725129272" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725129272" rel="stylesheet">
-    <link href="/css/theme.css?1725129272" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725129272" rel="stylesheet">
+    <link href="/css/nucleus.css?1725129562" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725129562" rel="stylesheet">
+    <link href="/css/hybrid.css?1725129562" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725129562" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725129562" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725129562" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725129562" rel="stylesheet">
+    <link href="/css/theme.css?1725129562" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725129562" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725129272" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725129562" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725129272"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725129562"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725129272"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725129272"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725129562"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725129562"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725129272"></script>
+<script type="text/javascript" src="/js/search.js?1725129562"></script>
 
     
   </div>
@@ -471,37 +471,37 @@
 <h4 id="tạo-upload-api-put">Tạo Upload API (PUT)</h4>
 <ol>
 <li>Trên thanh tìm kiếm, tìm API Gateway và nhấn chọn để vào trang của dịch vụ AWS API Gateway. Nhấn <strong>Create API</strong>, chọn <strong>REST API</strong> sau đó nhấn <strong>Build</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_1.jpg"></li>
 <li>Điền tên API, các tùy chọn còn lại để mặc định sau đó nhấn <strong>Create API</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_2.jpg"></li>
 <li>Tự động điều hướng sang trang quản lý API vừa tạo. Chọn &lsquo;/&rsquo; sau đó nhấn <strong>Create resource</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_3.jpg"></li>
 <li>Tương tự làm theo các bước như hình sau:
-<img alt="Image" src="../../../images/API%20Gateway/Console_4.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/Console_5.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/Console_6.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_4.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Console_5.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Console_6.jpg"></li>
 <li>Nhấn vào &lsquo;<strong>/{key}</strong>&rsquo; và chọn <strong>Create method</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Console_7.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Console_7.jpg"></li>
 <li>Với Upload file thì ở <strong>Method type</strong> chọn <strong>PUT</strong>, chọn <strong>Region</strong> tương ứng, để tương tác với S3 chúng ta chọn AWS Service là <strong>Simple Storage Service (S3)</strong>. <strong>HTTP Method</strong> chọn <strong>PUT</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_1.jpg"></li>
 <li>Các bước sau làm theo hình. Ở <strong>Excution role</strong>, tạo 1 Role tương tự như cách tạo IAM Role cho Lambda nhưng AWS Service là API Gateway, với các policy tương ứng. Sau đó dán arn của IAM Role vào cho method.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_2.jpg"></li>
 <li>Chọn API key required ở phần mở rộng <strong>Method request settings</strong> sau đó nhấn <strong>Create method</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_3.jpg"></li>
 <li>Method được tạo thành công. Nhấn vào tab <strong>Integration request</strong> sau đó chọn <strong>Edit</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_4.jpg"></li>
 <li>Ở phần mở rộng URL path parameters, <strong>Add path parameter</strong> như hình . Sau đó nhấn <strong>Save changes</strong>.
 <code>Name: bucket, Mapped from: method.request.path.bucket (tương ứng các parameters trên đường dẫn).</code>
 <code>Name: filekey, Mapped from: method.request.path.key (tương ứng các parameters trên đường dẫn).</code>
-<img alt="Image" src="../../../images/API%20Gateway/Create_method_5.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Create_method_5.jpg"></li>
 <li>Chọn <strong>API settings</strong> ở thanh bên, sau đó nhấn <strong>Manage media types</strong> để thêm các loại dữ liệu binary API có thể nhận.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_1.jpg"></li>
 <li>Thêm các <strong>Binary media type</strong> sau để tương tác với các file dạng ảnh sau đó lưu lại.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_2.jpg"></li>
 <li>Ở tab <strong>Integration response</strong> của PUT method vừa tạo, chọn <strong>Edit</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_3.jpg"></li>
 <li>Ở phần mở rộng <strong>Mapping templates</strong>, có thể tùy chỉnh phản hồi của API. Ở đây, mình cấu hình API sẽ trả về đường dẫn CloudFront của file nếu upload thành công. Sau đó lưu lại.
-<img alt="Image" src="../../../images/API%20Gateway/API_Setting_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/API_Setting_4.jpg"></li>
 <li>Quay lại trang của PUT method vừa tạo, chọn <strong>Deploy API</strong>.</li>
 <li>Chọn hoặc tạo mới Stage sau đó nhấn <strong>Deploy</strong>.
 
@@ -509,9 +509,9 @@
 </code></pre>
 </div>
 
-<img alt="Image" src="../../../images/API%20Gateway/Deploy_API_1.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/Deploy_API_1.jpg"></li>
 <li>Sau khi deploy thành công, chọn <strong>Stages</strong> bên thanh chức năng, nhấn vào API tương ứng để có thể xem đường dẫn gọi API
-<img alt="Image" src="../../../images/API%20Gateway/Deploy_API_2.jpg">
+<img alt="Image" src="../../images/API%20Gateway/Deploy_API_2.jpg">
 Tiếp theo là các bước tạo API Key và Usage plan cho API.
 
 <div class="notices note" ><pre><code>**API key** dùng để xác thực khi gọi API, tránh trường hợp API được gọi cho các mục đích xấu, sử dụng bởi những người không có quyền sở hữu.  
@@ -521,30 +521,30 @@ Tiếp theo là các bước tạo API Key và Usage plan cho API.
 </li>
 <li>Ở thanh chức năng, chọn API keys sau đó nhấn <strong>Create API key</strong>.</li>
 <li>Điền tên API key rồi lưu lại.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey.jpg"></li>
 <li>Sao chép API key vừa tạo.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_2.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_2.jpg"></li>
 <li>Ở phần <strong>Usage plan</strong>, nhấn <strong>Create usage plan</strong>.</li>
 <li>Điền các cấu hình mong muốn. <strong>Rate</strong>: Số request mỗi giây. <strong>Burst</strong>: Số request đồng thời. <strong>Requests</strong>: Số requests người dùng có thể yêu cầu trong một khoảng thời gian (mỗi ngày, mỗi tháng,&hellip;). Sau đó nhấn <strong>Create usage plan</strong>.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_3.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_3.jpg"></li>
 <li>Quay lại <strong>APIs key</strong>, chọn API key vừa tạo sau đó nhấn <strong>Add to usage plan</strong> để gán API với Usage plan mong muốn.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_4.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_4.jpg"></li>
 <li>Ở tab <strong>Associated stages</strong>, chọn <strong>Add stage</strong> để thêm API đã Deploy có thể sử dụng Usage plan.
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_5.jpg">
-<img alt="Image" src="../../../images/API%20Gateway/APIKey_6.jpg"></li>
+<img alt="Image" src="../../images/API%20Gateway/APIKey_5.jpg">
+<img alt="Image" src="../../images/API%20Gateway/APIKey_6.jpg"></li>
 </ol>
 <h4 id="tạo-delete-api-delete">Tạo Delete API (DELETE)</h4>
 <ol>
 <li>Ở mục <strong>Resources</strong> bên thanh chức năng, chọn Create method.</li>
 <li>Chọn <strong>Method type</strong> là <strong>DELETE</strong>. Vì API kích hoạt Lambda function chúng ta đã tạo trước đó nên thực hiện cấu hình như hình dưới.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_1.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_1.jpg"></li>
 <li>Sau đó nhấn <strong>Create method</strong>.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_2.jpg"></li>
 <li>Delete API đã được tạo thành công.
-<img alt="Image" src="../../../images/Lambda/API_Lambda_3.jpg"></li>
+<img alt="Image" src="../../images/Lambda/API_Lambda_3.jpg"></li>
 <li>Tương tự tiến hành Deploy Delete API.
-<img alt="Image" src="../../../images/Lambda/Deploy_1.jpg">
-<img alt="Image" src="../../../images/Lambda/Deploy_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Deploy_1.jpg">
+<img alt="Image" src="../../images/Lambda/Deploy_2.jpg"></li>
 </ol>
 <p>Vậy là chúng ta đã tạo xong 2 API cho Upload và Delete. Giờ chúng ta sẽ tới bước thử nghiệm.</p>
 
@@ -729,19 +729,19 @@ Tiếp theo là các bước tạo API Key và Usage plan cho API.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725129272"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725129272"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725129272"></script>
-    <script src="/js/jquery.sticky.js?1725129272"></script>
-    <script src="/js/featherlight.min.js?1725129272"></script>
-    <script src="/js/highlight.pack.js?1725129272"></script>
+    <script src="/js/clipboard.min.js?1725129562"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725129562"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725129562"></script>
+    <script src="/js/jquery.sticky.js?1725129562"></script>
+    <script src="/js/featherlight.min.js?1725129562"></script>
+    <script src="/js/highlight.pack.js?1725129562"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725129272"></script>
-    <script src="/js/learn.js?1725129272"></script>
-    <script src="/js/hugo-learn.js?1725129272"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725129562"></script>
+    <script src="/js/learn.js?1725129562"></script>
+    <script src="/js/hugo-learn.js?1725129562"></script>
 
-    <link href="/mermaid/mermaid.css?1725129272" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725129272"></script>
+    <link href="/mermaid/mermaid.css?1725129562" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725129562"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
