@@ -1,0 +1,34 @@
+import { S3Client, DeleteObjectCommand } from "@aws-sdk/client-s3";
+
+export const handler = async (event) => {
+    const bucketName = event['pathParameters']['bucket'];  
+    const objectKey = event['pathParameters']['key'];     
+
+    const s3 = new S3Client();
+
+    try {
+        const command = new DeleteObjectCommand({
+            Bucket: bucketName,
+            Key: objectKey
+        });
+
+        await s3.send(command);
+
+        console.log(`Successfully deleted ${objectKey} from ${bucketName}`);
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                message: `Deleted object ${objectKey} successfully`
+            })
+        };
+    } catch (error) {
+        console.error(`Error deleting object ${objectKey} from ${bucketName}:`, error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({
+                message: `Failed to delete object`,
+                error: error.message
+            })
+        };
+    }
+};
