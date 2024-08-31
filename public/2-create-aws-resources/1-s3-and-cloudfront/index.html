@@ -12,21 +12,21 @@
     <title>Create S3 Bucket and CloudFront :: Simple Serverless Image Storage Using AWS S3</title>
 
     
-    <link href="/css/nucleus.css?1725128939" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725128939" rel="stylesheet">
-    <link href="/css/hybrid.css?1725128939" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725128939" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725128939" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725128939" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725128939" rel="stylesheet">
-    <link href="/css/theme.css?1725128939" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725128939" rel="stylesheet">
+    <link href="/css/nucleus.css?1725129272" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725129272" rel="stylesheet">
+    <link href="/css/hybrid.css?1725129272" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725129272" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725129272" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725129272" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725129272" rel="stylesheet">
+    <link href="/css/theme.css?1725129272" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725129272" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725128939" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725129272" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725128939"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725129272"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725128939"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725128939"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725129272"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725129272"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725128939"></script>
+<script type="text/javascript" src="/js/search.js?1725129272"></script>
 
     
   </div>
@@ -480,10 +480,10 @@
 <h4 id="create-s3-bucket">Create S3 Bucket</h4>
 <ol>
 <li>In the search bar, search for S3 and select it to go to the S3 Bucket service console.
-<img alt="Image" src="../../../images/S3_Related/Console_1.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Console_1.jpg"></li>
 <li>Click <strong>Create bucket</strong> to create a new S3 Bucket.</li>
 <li>On the create S3 Bucket page, enter the desired Bucket name and select ACLs disabled in the Object Ownership section.
-<img alt="Image" src="../../../images/S3_Related/Name_ownership.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Name_ownership.jpg"></li>
 </ol>
 
 <div class="notices note" ><p>Select the ACLs (Access Control List) disabled option to configure the ownership of all files, folders, etc., in the S3 Bucket to this AWS account. All access and modifications to objects within are governed by <strong>Policies</strong> (IAM Policies and Permissions). This enhances privacy, security, and data safety.</p>
@@ -491,7 +491,7 @@
 
 <ol start="4">
 <li>Configure the <strong>Public Access</strong> and <strong>Bucket Versioning</strong> settings as default.
-<img alt="Image" src="../../../images/S3_Related/Access_version.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Access_version.jpg"></li>
 </ol>
 
 <div class="notices note" ><p>Blocking public access ensures security, interacting only through <strong>CloudFront</strong> and <strong>API</strong> (with authentication).</p>
@@ -500,25 +500,25 @@
 <ol start="5">
 <li>
 <p>Configure <strong>Tags</strong>, <strong>Default encryption</strong>, and <strong>Advanced settings</strong> as default.
-<img alt="Image" src="../../../images/S3_Related/Encrytion_setting.jpg">
-<img alt="Image" src="../../../images/S3_Related/Advanced_setting.jpg"></p>
+<img alt="Image" src="../../images/S3_Related/Encrytion_setting.jpg">
+<img alt="Image" src="../../images/S3_Related/Advanced_setting.jpg"></p>
 </li>
 <li>
 <p>Click <strong>Create bucket</strong>. Your S3 Bucket has been created successfully.
-<img alt="Image" src="../../../images/S3_Related/Console_2.jpg"></p>
+<img alt="Image" src="../../images/S3_Related/Console_2.jpg"></p>
 </li>
 </ol>
 <h4 id="upload-and-view-imagesfilesfolders">Upload and View Images/Files/Folders</h4>
 <ol>
 <li>Click the <strong>Upload</strong> button.
-<img alt="Image" src="../../../images/S3_Related/Upload_console_1.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Upload_console_1.jpg"></li>
 <li>Select <strong>Add files/Add folder</strong> according to the type of object you want to upload and click <strong>Upload</strong>.
-<img alt="Image" src="../../../images/S3_Related/Upload_console_2.jpg">
+<img alt="Image" src="../../images/S3_Related/Upload_console_2.jpg">
 Upload successful.
-<img alt="Image" src="../../../images/S3_Related/Upload_console_3.jpg">
-<img alt="Image" src="../../../images/S3_Related/Upload_console_4.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Upload_console_3.jpg">
+<img alt="Image" src="../../images/S3_Related/Upload_console_4.jpg"></li>
 <li>You can view the content (for images) or download it using the <strong>Open</strong> button.
-<img alt="Image" src="../../../images/S3_Related/Upload_console_5.jpg"></li>
+<img alt="Image" src="../../images/S3_Related/Upload_console_5.jpg"></li>
 </ol>
 
 <div class="notices note" ><p>You can view/download using the URL at Object URL if you disable the Block Public Access option (at Bucket creation stage).</p>
@@ -527,25 +527,25 @@ Upload successful.
 <h4 id="create-cloudfront">Create CloudFront</h4>
 <ol>
 <li>In the search bar, search for CloudFront and select it to go to the AWS CloudFront service interface. Click <strong>Create distribution</strong> to create a new Distribution.
-<img alt="Image" src="../../../images/CloudFront_Related/Console_1.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/Console_1.jpg"></li>
 <li>Select the Origin domain as the domain of the S3 Bucket created above. Choose OAC (Origin Access Control) for the S3 Bucket created.
-<img alt="Image" src="../../../images/CloudFront_Related/Console_2.jpg">
+<img alt="Image" src="../../images/CloudFront_Related/Console_2.jpg">
 <em>If OAC does not exist, click Create new OAC to create a new one.</em>
-<img alt="Image" src="../../../images/CloudFront_Related/OAC_Create.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/OAC_Create.jpg"></li>
 <li>Follow the steps as shown below.
-<img alt="Image" src="../../../images/CloudFront_Related/Console_3.jpg">
-<img alt="Image" src="../../../images/CloudFront_Related/Console_4.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/Console_3.jpg">
+<img alt="Image" src="../../images/CloudFront_Related/Console_4.jpg"></li>
 <li>Click <strong>Create distribution</strong> to initialize.</li>
 <li>On the next initialization screen, you will see a prompt to add a policy to grant <strong>CloudFront</strong> access to the content stored in the S3 Bucket. Click Copy policy and return to the S3 Bucket management interface.
-<img alt="Image" src="../../../images/CloudFront_Related/Console_5.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/Console_5.jpg"></li>
 <li>Select the created S3 Bucket, click the Permissions tab, scroll down to the Bucket policy section, and click <strong>Edit</strong>.
-<img alt="Image" src="../../../images/CloudFront_Related/S3_Policy.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/S3_Policy.jpg"></li>
 <li>Paste the copied Policy and click <strong>Save changes</strong>.
-<img alt="Image" src="../../../images/CloudFront_Related/S3_Policy_2.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/S3_Policy_2.jpg"></li>
 <li>Return to the details of the newly created CloudFront Distribution (displayed at the <strong>Last modified</strong> section). Copy the <strong>Distribution domain name</strong> of the distribution (used to access content on the Origin domain).
-<img alt="Image" src="../../../images/CloudFront_Related/Console_6.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/Console_6.jpg"></li>
 <li>Access/view/download content in the S3 Bucket by entering the URL + path to the file stored in S3 (add &lsquo;/&rsquo; for subfolders).
-<img alt="Image" src="../../../images/CloudFront_Related/Image_Show.jpg"></li>
+<img alt="Image" src="../../images/CloudFront_Related/Image_Show.jpg"></li>
 </ol>
 <p>That completes the first step, creating an S3 Bucket and CloudFront to view/use content in the storage.</p>
 
@@ -727,19 +727,19 @@ Upload successful.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725128939"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725128939"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725128939"></script>
-    <script src="/js/jquery.sticky.js?1725128939"></script>
-    <script src="/js/featherlight.min.js?1725128939"></script>
-    <script src="/js/highlight.pack.js?1725128939"></script>
+    <script src="/js/clipboard.min.js?1725129272"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725129272"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725129272"></script>
+    <script src="/js/jquery.sticky.js?1725129272"></script>
+    <script src="/js/featherlight.min.js?1725129272"></script>
+    <script src="/js/highlight.pack.js?1725129272"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725128939"></script>
-    <script src="/js/learn.js?1725128939"></script>
-    <script src="/js/hugo-learn.js?1725128939"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725129272"></script>
+    <script src="/js/learn.js?1725129272"></script>
+    <script src="/js/hugo-learn.js?1725129272"></script>
 
-    <link href="/mermaid/mermaid.css?1725128939" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725128939"></script>
+    <link href="/mermaid/mermaid.css?1725129272" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725129272"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

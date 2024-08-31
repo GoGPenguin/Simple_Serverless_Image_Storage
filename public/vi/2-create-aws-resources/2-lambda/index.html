@@ -12,21 +12,21 @@
     <title>Tạo hàm Lambda :: Kho lưu trữ ảnh Serverless đơn giản với AWS S3</title>
 
     
-    <link href="/css/nucleus.css?1725128939" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725128939" rel="stylesheet">
-    <link href="/css/hybrid.css?1725128939" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725128939" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725128939" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725128939" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725128939" rel="stylesheet">
-    <link href="/css/theme.css?1725128939" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725128939" rel="stylesheet">
+    <link href="/css/nucleus.css?1725129272" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725129272" rel="stylesheet">
+    <link href="/css/hybrid.css?1725129272" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725129272" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725129272" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725129272" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725129272" rel="stylesheet">
+    <link href="/css/theme.css?1725129272" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725129272" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725128939" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725129272" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725128939"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725129272"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725128939"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725128939"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725129272"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725129272"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725128939"></script>
+<script type="text/javascript" src="/js/search.js?1725129272"></script>
 
     
   </div>
@@ -480,10 +480,10 @@
 <ol>
 <li>Vào IAM Role và nhấn <strong>Create role</strong> để tạo Role mới cho Lambda.</li>
 <li>Chọn <strong>AWS service</strong>/<strong>Lambda</strong>, nhấn <strong>Next</strong>.
-<img alt="Image" src="../../../images/Lambda/Lambda_IAM.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Lambda_IAM.jpg"></li>
 <li>Ở bước Add permissions tiếp tục nhấn <strong>Next</strong>.</li>
 <li>Đặt tên cho Role và review lại các tùy chọn sau đó nhấn <strong>Create role</strong>.
-<img alt="Image" src="../../../images/Lambda/Lambda_IAM_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Lambda_IAM_2.jpg"></li>
 <li>Chọn Role vừa tạo, nhấn Add permissions -&gt; Create inline policy để tạo Policy tùy chỉnh cho Role.</li>
 </ol>
 <p><em>JSON policy:</em></p>
@@ -523,16 +523,16 @@
 </code></pre>
 <ol start="5">
 <li>Chọn tab JSON và dán policy bên trên vào sau đó nhấn <strong>Next</strong>.
-<img alt="Image" src="../../../images/Lambda/Lambda_IAM_3.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Lambda_IAM_3.jpg"></li>
 <li>Đặt tên và xem lại các tùy chọn, sau đó nhấn <strong>Create policy</strong>.
-<img alt="Image" src="../../../images/Lambda/Lambda_IAM_4.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Lambda_IAM_4.jpg"></li>
 </ol>
 <h4 id="tạo-hàm-lambda">Tạo hàm Lambda</h4>
 <ol>
 <li>Trên thanh tìm kiếm, tìm Lambda và nhấn chọn để vào giao diện dịch vụ AWS Lambda, sau đó nhấn <strong>Create function</strong>.
-<img alt="Image" src="../../../images/Lambda/Console_1.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Console_1.jpg"></li>
 <li>Cấu hình các thông tin cơ bản cho Lambda function (tên, ngôn ngữ lập trình,&hellip;). Ở mục <strong>Execution role</strong>, chọn tùy chọn <strong>Use an existing role</strong> và nhấn chọn IAM Role chúng ta vừa tạo ở trên. Sau đó nhấn <strong>Create function</strong>.
-<img alt="Image" src="../../../images/Lambda/Console_2.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Console_2.jpg"></li>
 </ol>
 <p>Đoạn code này có mục đích là xóa file chỉ định trong S3 bucket cụ thể. Với 2 biến <em>bucketName</em> và <em>objectKey</em> được lấy từ path parameter trong url.</p>
 <pre><code>import { S3Client, DeleteObjectCommand } from &quot;@aws-sdk/client-s3&quot;;
@@ -572,7 +572,7 @@ export const handler = async (event) =&gt; {
 </code></pre>
 <ol start="3">
 <li>Dán mã nguồn bên trên vào phần Code của Lambda function vừa tạo rồi nhấn <strong>Deploy</strong>.
-<img alt="Image" src="../../../images/Lambda/Lambda_Func_1.jpg"></li>
+<img alt="Image" src="../../images/Lambda/Lambda_Func_1.jpg"></li>
 </ol>
 <p>Chúng ta vừa hoàn thành bước tạo Lambda function có chức năng xóa một object trong S3 Bucket.</p>
 
@@ -757,19 +757,19 @@ export const handler = async (event) =&gt; {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725128939"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725128939"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725128939"></script>
-    <script src="/js/jquery.sticky.js?1725128939"></script>
-    <script src="/js/featherlight.min.js?1725128939"></script>
-    <script src="/js/highlight.pack.js?1725128939"></script>
+    <script src="/js/clipboard.min.js?1725129272"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725129272"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725129272"></script>
+    <script src="/js/jquery.sticky.js?1725129272"></script>
+    <script src="/js/featherlight.min.js?1725129272"></script>
+    <script src="/js/highlight.pack.js?1725129272"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725128939"></script>
-    <script src="/js/learn.js?1725128939"></script>
-    <script src="/js/hugo-learn.js?1725128939"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725129272"></script>
+    <script src="/js/learn.js?1725129272"></script>
+    <script src="/js/hugo-learn.js?1725129272"></script>
 
-    <link href="/mermaid/mermaid.css?1725128939" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725128939"></script>
+    <link href="/mermaid/mermaid.css?1725129272" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725129272"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
