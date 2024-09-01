@@ -19,4 +19,4 @@ Bước thứ hai là tạo Lambda với chức năng xóa tệp hình ảnh tro
 
 #### Kiến trúc tổng quan
 
-![Image](../images/Workshop_000002.drawio.png)
+![Image](../../images/Workshop_000002.drawio.png)
